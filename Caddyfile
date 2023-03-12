@@ -1,0 +1,20 @@
+{
+	http_port 80
+	https_port 443
+	email ca@example.com
+	admin off
+	acme_ca https://acme-v02.api.letsencrypt.org/directory
+}
+
+import snippets/*
+
+# Example site config
+app.example.com {
+	import cache
+	import encoding
+	import hsts
+	import security
+	import logs prod
+
+	import laravel-app /var/www/app/current
+}
